@@ -47,7 +47,7 @@ public class SpellChecker {
 		int min =levenshtein(word.toLowerCase(),dictionary[0].toLowerCase());
 		int min_index=0;
 		for (int i=0;i<dictionary.length;i++){ 
-			if (levenshtein(word.toLowerCase(),dictionary[i].toLowerCase())<=min){
+			if (levenshtein(word.toLowerCase(),dictionary[i].toLowerCase())<min){
 				min =Math.min(min,levenshtein(word.toLowerCase(),dictionary[i].toLowerCase()));
 				min_index = i;
 			}
